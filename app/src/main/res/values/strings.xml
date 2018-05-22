@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Countries</string>
+    <string name="imort">import</string>
+    <string name="gallery">gallery</string>
+    <string name="slideshow">slideshow</string>
+    <string name="tools">tools</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="zomato_api"><![CDATA[https://restcountries.eu/rest/v2/all]]></string>
+</resources>

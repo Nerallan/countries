@@ -9,12 +9,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.nerallan.countries.R;
+import com.nerallan.countries.ViewHolder;
 import com.nerallan.countries.model.DataModel;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapter.MyHolder> {
+public class RecyclerviewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     private int resource;
     private List<DataModel> recyclerdata;
@@ -28,17 +29,17 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
     }
 
     @Override
-    public MyHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view,parent,false);
-        MyHolder myHolder = new MyHolder(view);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view,  parent,false);
+        ViewHolder viewHolder = new ViewHolder(view);
 
-        return myHolder;
+        return viewHolder;
     }
 
 
     @Override
-    public void onBindViewHolder(MyHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
 
         DataModel dataModel = recyclerdata.get(position);
         holder.name.setText(dataModel.getName());
@@ -53,18 +54,5 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
         return recyclerdata.size();
     }
 
-    class MyHolder extends RecyclerView.ViewHolder{
-        public TextView name,capital,area;
-        public ImageView flagView;
 
-        public MyHolder(View itemView) {
-            super(itemView);
-            name = (TextView) itemView.findViewById(R.id.name);
-            capital = (TextView) itemView.findViewById(R.id.capital);
-            area = (TextView) itemView.findViewById(R.id.id);
-            flagView = (ImageView) itemView.findViewById(R.id.flag_image);
-
-
-        }
-    }
 }

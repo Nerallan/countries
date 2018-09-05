@@ -57,7 +57,6 @@ public class JSONhelper{
                     dataModel.setFlagUrl(flagUrl);
 
                     data.add(dataModel);
-
                }
             }
 

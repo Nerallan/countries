@@ -17,9 +17,11 @@ import android.widget.Toolbar;
 
 import com.nerallan.countries.JSONhelper;
 import com.nerallan.countries.R;
-import com.nerallan.countries.adapters.RecyclerviewAdapter;
+
+import com.nerallan.countries.adapters.RecyclerViewAdapter;
 import com.nerallan.countries.model.DataModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -32,6 +34,7 @@ public class FragmentCountries extends Fragment{
     Button button;
     ImageView flagView;
     View v;
+
 
     public FragmentCountries(){}
 
@@ -66,7 +69,7 @@ public class FragmentCountries extends Fragment{
             super.onPostExecute(dataModels);
             RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
             recyclerView.setLayoutManager(layoutManager);
-            RecyclerviewAdapter recyclerviewAdapter = new RecyclerviewAdapter(dataModels, getActivity().getApplicationContext(), R.layout.view);
+            RecyclerViewAdapter recyclerviewAdapter = new RecyclerViewAdapter(dataModels, getActivity().getApplicationContext(), R.layout.view);
             //RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
             //recyclerView.setLayoutManager(layoutManager);
             recyclerView.setItemAnimator(new DefaultItemAnimator());

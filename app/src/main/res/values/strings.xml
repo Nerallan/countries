@@ -6,7 +6,7 @@
     <string name="tools">tools</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
-
+    <string name="quotedesc">Welcome! Where should we deliver to?</string>
     <string name="zomato_api"><![CDATA[https://restcountries.eu/rest/v2/all]]></string>
 
     <!-- TODO: Remove or change this placeholder text -->

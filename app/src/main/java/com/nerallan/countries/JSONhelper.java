@@ -1,5 +1,9 @@
 package com.nerallan.countries;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
+
 import com.nerallan.countries.model.DataModel;
 
 import org.json.JSONArray;
@@ -22,7 +26,6 @@ public class JSONhelper{
      HttpURLConnection connection;
      List<DataModel> data;
 
-
     public List<DataModel> getdatafromurl(String url){
 
         try{
@@ -35,25 +38,37 @@ public class JSONhelper{
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
             String line = "";
             StringBuffer buffer = new StringBuffer();
-            while ((line=reader.readLine())!=null){
+            while ((line=reader.readLine()) != null){
 
                 buffer.append(line);
                 String result = buffer.toString();
                 JSONArray jsonArray = new JSONArray(result);
                 data = new ArrayList<>();
 
-                for (int i =0; i<buffer.length();i++){
+                for (int i = 0; i < buffer.length();i++){
 
                     DataModel dataModel = new DataModel();
-                    JSONObject jsonObject =jsonArray.getJSONObject(i);
+                    JSONObject jsonObject = jsonArray.getJSONObject(i);
                     String name = jsonObject.getString("name");
                     String capital= jsonObject.getString("capital");
                     String area = jsonObject.getString("area");
                     String flagUrl = jsonObject.getString("flag");
+                    String population = jsonObject.getString("population");
+                    String region = jsonObject.getString("region");
+                    String numericCode = jsonObject.getString("numericCode");
+                    String alpha3Code = jsonObject.getString("alpha3Code");
+
+//                    byte[] decodedString = Base64.decode(flagUrl, Base64.DEFAULT);
+//                    Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+
 
                     dataModel.setCapital(capital);
                     dataModel.setName(name);
                     dataModel.setArea(area);
+                    dataModel.setRegion(region);
+                    dataModel.setPopulation(population);
+                    dataModel.setNumericCode(numericCode);
+                    dataModel.setAlpha3Code(alpha3Code);
                     dataModel.setFlagUrl(flagUrl);
 
                     data.add(dataModel);

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:weightSum="100">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:id="@+id/image"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Canada"
+        android:textSize="20sp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/capital"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Capital"
+        android:textSize="20sp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/region"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="region"
+        android:textSize="20sp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/area"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="area"
+        android:textSize="20sp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/population"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="population"
+        android:textSize="20sp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/alpha3Code"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="alpha3Code"
+        android:textSize="20sp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numericCode"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="numericCode"
+        android:textSize="20sp"
+        android:textColor="#000"/>
+
+</LinearLayout>

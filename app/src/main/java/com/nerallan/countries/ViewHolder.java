@@ -3,6 +3,7 @@ package com.nerallan.countries;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 /**
@@ -13,13 +14,14 @@ public class ViewHolder extends RecyclerView.ViewHolder{
 
     public TextView name,capital,area;
     public ImageView flagView;
+    public RelativeLayout parentLayout;
 
     public ViewHolder(View itemView) {
         super(itemView);
-        name = (TextView) itemView.findViewById(R.id.name);
-        capital = (TextView) itemView.findViewById(R.id.capital);
-        area = (TextView) itemView.findViewById(R.id.id);
-        flagView = (ImageView) itemView.findViewById(R.id.flag_image);
-
+        name = itemView.findViewById(R.id.name);
+//        capital = itemView.findViewById(R.id.capital);
+//        area = itemView.findViewById(R.id.id);
+        flagView = itemView.findViewById(R.id.flag_image);
+        parentLayout = itemView.findViewById(R.id.parent_layout);
     }
 }

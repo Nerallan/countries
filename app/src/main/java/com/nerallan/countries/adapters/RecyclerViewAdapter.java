@@ -24,6 +24,7 @@ import static android.content.ContentValues.TAG;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     private static final String TAB = "RecyclerViewAdapter";
+    private final String testImage = "http://www.geoatlas.com/medias/maps/flags/Flags%20of%20Europe/fl95eu77s03s/europe_flags.jpg";
 
     private int resource;
     private List<DataModel> recyclerdata;
@@ -56,7 +57,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
         Glide.with(context)
                 .asBitmap()
-                .load("https://restcountries.eu/data/afg.svg")
+                .load(testImage)
                 .into(holder.flagView);
 
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
@@ -66,7 +67,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
                 Toast.makeText(context, dataModel.getName(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, GalleryActivity.class);
                 intent.putExtra("country_name", dataModel.getName());
-                intent.putExtra("flag_image", dataModel.getFlagUrl());
+                intent.putExtra("flag_image", testImage);
                 intent.putExtra("area", dataModel.getArea());
                 intent.putExtra("capital", dataModel.getCapital());
                 intent.putExtra("population", dataModel.getPopulation());

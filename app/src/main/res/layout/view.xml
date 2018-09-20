@@ -19,7 +19,7 @@
         android:layout_toRightOf="@+id/image"
         android:textColor="#000"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="120dp"
         android:textSize="17sp"/>
 
 </RelativeLayout>

@@ -58,10 +58,6 @@ public class JSONhelper{
                     String numericCode = jsonObject.getString("numericCode");
                     String alpha3Code = jsonObject.getString("alpha3Code");
 
-//                    byte[] decodedString = Base64.decode(flagUrl, Base64.DEFAULT);
-//                    Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-
-
                     dataModel.setCapital(capital);
                     dataModel.setName(name);
                     dataModel.setArea(area);
